@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <style>
+      #div-1, #div-2 {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1">
+      <p>Inside div-1</p>
+    </div>
+    <div id="div-2">
+      <p>Inside div-2</p>
+    </div>
+    <!-- If script is in head it will fail: Uncaught TypeError: Cannot read property 'clientWidth' of null -->
+    <script src="reflow-read-write-read-write.js"></script>
+  </body>
+</html>
