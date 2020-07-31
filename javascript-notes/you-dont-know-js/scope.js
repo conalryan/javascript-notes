@@ -9,7 +9,7 @@
  
 /* -----------------------------------------------------------------------------------------------
  * Scope: Where to look for things
- * JavaScript has function scope only*
+ * JavaScript has function scope only
  *
  * Compiler - First pass of code is done by compiler
  * Executor - Then microseconds later second pass of code is done by executor
@@ -31,7 +31,7 @@ function bar() {
 	var foo = "baz";
 }
 
-// compiler will regiter and parameters in the functions scope (i.e. baz(foo), compiler registers foo in baz's scope)
+// compiler will regiter any parameters in the functions scope (i.e. baz(foo), compiler registers foo in baz's scope)
 function baz(foo) {
 	foo = "bam";
 	bam = "yay";
@@ -43,7 +43,7 @@ function baz(foo) {
 // of an assignment (i.e. =)
 var leftSide = "rightSide"; // LHS is target, RHS is source
 
-// Executor says "Hey Scope manage I have a declaration for leftSide, do you have a LHS registed leftSide?"
+// Executor says "Hey Scope manager, I have a declaration for leftSide, do you have a LHS registed leftSide?"
 // if so, then Scope Manager give reference of var to executor, then executor assigns "rightSide" to it
 
 /* -----------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ function functionDeclaration() {
 
 }
 
-// annonymous function express - avoid this!
+// annonymous function expression - avoid this!
 var functionExpression = function() {
 
 }
@@ -164,7 +164,7 @@ foo();
 // let block statements
 function foo(bar) {
 	/* let */ { let baz = bar;
-		console.log(bax); // "bar";
+		console.log(baz); // "bar";
 	}
 	console.log(baz); // Error
 }
@@ -279,7 +279,7 @@ foo(); // "bar1"
  * 3rd in precendence
  * Implicit binding
  * 	- Object property reference
- *	- aka base object, conext object, owning object
+ *	- aka base object, context object, owning object
  */
 function foo() {
 	console.log(this.bar);
@@ -297,7 +297,7 @@ o3.foo(); 	// "bar3"
 
 // it doesn't matter where a function is declared, no one owns it more than anyone else
 var o1 = {
-	bar: "bar1";
+	bar: "bar1",
 	foo: function() {
 		console.log(this.bar);
 	}

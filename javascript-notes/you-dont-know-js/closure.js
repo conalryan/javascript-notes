@@ -187,7 +187,7 @@ console.log(foo.bar.obj.bar); // "bar"
  * ins't that common -Kyle
  */
 
- // var foo will be a reference ot the returned function in the outer socpe and
+ // var foo will be a reference of the returned function in the outer scope and
  // the function if its named will a reference to the function in the inner scope
 var foo = (function() {
 	var o = { bar: "bar" };

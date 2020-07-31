@@ -66,7 +66,7 @@ var thepage = new PageController(router);
  *	A constructor makes an object that is linked to the constructors own prototype
  *	
  *	C++ and Java should have been called Class oriented as opposed to object oriented
- *  In JS we don't call classes to create objectes, we create objects out of thin air
+ *  In JS we don't call classes to create objects, we create objects out of thin air
  */
 
  /*
@@ -141,7 +141,7 @@ foo.__proto__ function() { [native code] }
 function Foo(who) {
  	this.me = who;
  }
- foo.prototype.identify = function() {
+ Foo.prototype.identify = function() {
  	return "I am " + this.me;
  };
 
